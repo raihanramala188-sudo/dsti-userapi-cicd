@@ -1,43 +1,54 @@
-# User API web application
 
-It is a basic NodeJS web application exposing REST API that creates and stores user parameters in [Redis database](https://redis.io/).
+# User API Web Application
+
+This is a basic Node.js web application exposing a REST API that creates and stores user parameters in a Redis database.
 
 ## Functionality
 
-1. Start a web server
-2. Create a user
+1. Start a web server.
+2. Create a user.
 
 ## Installation
 
-This application is written on NodeJS and it uses Redis database.
+This application is written in Node.js and uses a Redis database.
 
-1. [Install NodeJS](https://nodejs.org/en/download/)
+### 1. Install Node.js
 
-2. [Install Redis](https://redis.io/download)
+Download and install Node.js:
 
-3. Install application
+https://nodejs.org/
 
-Go to the root directory of the application (where `package.json` file located) and run:
+### 2. Install Redis
 
-```
-npm install 
+Download and install Redis:
+
+https://redis.io/download
+
+### 3. Install the application
+
+Go to the root directory of the application (where the `package.json` file is located) and run:
+
+```bash
+npm install
 ```
 
 ## Usage
 
-1. Start a web server
+### 1. Start the web server
 
-From the root directory of the project run:
+From the root directory of the project, run:
 
-```
+```bash
 npm start
 ```
 
-It will start a web server available in your browser at http://localhost:3000.
+The web server will be available in your browser at:
 
-2. Create a user
+http://localhost:3000
 
-Send a POST (REST protocol) request using terminal:
+### 2. Create a user
+
+Send a POST request using the terminal:
 
 ```bash
 curl --header "Content-Type: application/json" \
@@ -46,18 +57,26 @@ curl --header "Content-Type: application/json" \
   http://localhost:3000/user
 ```
 
-It will output:
+Expected output:
 
-```
+```json
 {"status":"success","msg":"OK"}
 ```
 
-Another way to test your REST API is to use [Postman](https://www.postman.com/).
+Another way to test your REST API is to use Postman:
+
+https://www.postman.com/
 
 ## Testing
 
 From the root directory of the project, run:
 
-```
+```bash
 npm test
 ```
+
+## DSTI DevOps Lab
+
+Repository: dsti-userapi-cicd
+
+This project is part of the DSTI DevOps lab on Continuous Integration and Continuous Delivery.
